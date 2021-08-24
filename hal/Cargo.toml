@@ -1,0 +1,25 @@
+[package]
+name = "atsamg-hal"
+version = "0.1.0"
+authors = ["Jeff McBride <jeff@jeffmcbride.net>"]
+description = "HAL and Peripheral access API for ATSAMG55J and ATSAMG55G microcontrollers"
+keywords = ["no-std", "arm", "cortex-m", "embedded-hal"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/atsamd-rs/atsamd"
+readme = "README.md"
+documentation = "https://docs.rs/crate/atsamd-hal/"
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.7"
+embedded-hal = "0.2"
+
+[dependencies.atsamg55j]
+path = "../pac/atsamg55j"
+optional = true
+version = "0.1"
+
+[features]
+device = []
+samg55j = ["device", "atsamg55j"]
+samg55j-rt = ["samg55j", "atsamg55j/rt"]
