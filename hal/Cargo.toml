@@ -12,7 +12,7 @@ edition = "2018"
 
 [dependencies]
 cortex-m = "0.7"
-embedded-hal = "0.2"
+embedded-hal = {features = ["unproven"], version = "0.2"}
 
 [dependencies.atsamg55j]
 path = "../pac/atsamg55j"

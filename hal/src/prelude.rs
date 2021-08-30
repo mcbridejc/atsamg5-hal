@@ -1,0 +1,1 @@
+pub use crate::gpio::GpioExt as _atsamg_hal_gpio_GpioExt;
